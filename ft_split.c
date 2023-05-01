@@ -5,12 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbulanad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/24 12:50:39 by rbulanad          #+#    #+#             */
-/*   Updated: 2023/03/24 12:53:22 by rbulanad         ###   ########.fr       */
+/*   Created: 2023/02/20 14:48:08 by rbulanad          #+#    #+#             */
+/*   Updated: 2023/04/24 16:08:26 by rbulanad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+
+int	len(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
 
 static	int	countwrd(char *s, char c)
 {	
@@ -45,16 +55,6 @@ char	*substr2(char *s, int start, int end)
 	ret[i] = '\0';
 	return (ret);
 }
-/*
-int	len(char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}*/
 
 char	**ft_split(char *s, char c)
 {

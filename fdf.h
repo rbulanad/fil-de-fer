@@ -6,24 +6,21 @@
 /*   By: rbulanad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 10:51:44 by rbulanad          #+#    #+#             */
-/*   Updated: 2023/04/04 11:05:12 by rbulanad         ###   ########.fr       */
+/*   Updated: 2023/05/01 18:10:27 by rbulanad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FDF_H
 #define FDF_H
 
-# include "get_next_line2/get_next_line.h"
 # include <mlx.h>
 # include <stdlib.h>
 # include <math.h>
+# include "get_next_line_bonus.h"
 # include <stdio.h> ///////////////////////////////////////////
-
-typedef struct	s_data
-{
-	void	*mlx;
-	void	*mlx_win;
-}				t_data;
+# define HEIGHT 800
+# define WIDTH 800
+# define ZOOM 20
 
 typedef struct	s_img
 {
@@ -34,12 +31,39 @@ typedef struct	s_img
 	int		endian;
 }				t_img;
 
-int		kb_hooks(int key);
-int		quit_win(void);
-void	window_maker(t_data *data);
-char	*freejoin(char *s1, char *s2);
-char	**ft_split(char *s, char c);
-int		len(char *str);
+typedef struct	s_iso
+{
+	int	x;
+	int	y;
+	int z;
+	int	isox;
+	int isoy;
+	int	dx;
+	int	dy;
+	int	sx;
+	int	sy;
+	int	zoom;
+}				t_iso;
 
+typedef struct	s_coord
+{
+	int					numof_col;
+	int					numof_row;
+	struct s_iso		**tab;
+}				t_coord;
+
+typedef struct	s_data
+{
+	void			*mlx;
+	void			*mlx_win;
+	struct s_img	img;
+	struct s_coord	crd;
+	struct s_iso	iso;
+}				t_data;
+
+char	**ft_split(char *s, char c);
+int		len(char *s);
+char	*joinfree(char *s1, char *s2);
+int		ft_atoi(char *str);
 
 #endif

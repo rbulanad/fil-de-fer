@@ -6,11 +6,11 @@
 /*   By: rbulanad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 09:21:06 by rbulanad          #+#    #+#             */
-/*   Updated: 2023/01/09 16:41:20 by rbulanad         ###   ########.fr       */
+/*   Updated: 2023/04/24 17:33:22 by rbulanad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fdf.h"
 
 static int	is_space(char c)
 {
@@ -19,7 +19,7 @@ static int	is_space(char c)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(char *str)
 {
 	int	i;
 	int	result;

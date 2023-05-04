@@ -6,7 +6,7 @@
 #    By: rbulanad <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/10 13:28:51 by rbulanad          #+#    #+#              #
-#    Updated: 2023/04/26 11:35:19 by rbulanad         ###   ########.fr        #
+#    Updated: 2023/05/04 18:09:03 by rbulanad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,12 @@ SOURCES		= main.c \
 			  get_next_line_utils_bonus.c \
 			  ft_split.c \
 			  ft_strjoin.c \
-			  ft_atoi.c
+			  ft_atoi.c \
+			  window.c \
+			  file_read2.c \
+			  graphics.c \
+			  draw_algo.c \
+			  gradient.c
 OBJECTS		= ${SOURCES:.c=.o}
 RM		= rm -f
 CC		= gcc
